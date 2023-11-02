@@ -15,7 +15,7 @@
                                 <option *ngFor="let engineer of user" value="{{engineer.username}}">
                                     {{engineer.username}}</option>
                             </select>
-                            <span *ngIf="engg.invalid && engg.touched" style="color: red;">Please select an
+                            <span class="text-danger" *ngIf="engg.invalid && engg.touched">Please select an
                                 engineer</span>
                         </div>
 
@@ -37,8 +37,8 @@
 
                                         <!-- Modal body -->
                                         <div class="modal-body">
-                                            <span *ngIf="isValid" style="color:green">{{message}}</span>
-                                            <span *ngIf="!isValid" style="color: red">{{message}}</span>
+                                            <span class="text-success" *ngIf="isValid">{{message}}</span>
+                                            <span class="text-danger" *ngIf="!isValid">{{message}}</span>
                                         </div>
 
                                         <!-- Modal footer -->

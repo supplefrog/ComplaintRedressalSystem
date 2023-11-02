@@ -16,7 +16,7 @@
                                 <option value="RESOLVED">RESOLVED</option>
                                 <option value="ESCALATED">ESCALATED</option>
                             </select>
-                            <span *ngIf="st.invalid && st.touched" style="color: red;">Please select a status</span>
+                            <span class="text-danger" *ngIf="st.invalid && st.touched">Please select a status</span>
                         </div>
 
                         <div class="form-group">
@@ -24,7 +24,7 @@
                             <input type="text" class="form-control" required #rmk="ngModel"
                                 placeholder="Enter status remark" id="rmk" name="remark" [(ngModel)]="complaint.remark"
                                 ngModel>
-                            <span *ngIf="rmk.invalid && rmk.touched" style="color:red">Please enter valid
+                            <span class="text-danger" *ngIf="rmk.invalid && rmk.touched">Please enter valid
                                 remark</span>
                         </div>
 
@@ -47,8 +47,8 @@
 
                                         <!-- Modal body -->
                                         <div class="modal-body">
-                                            <span *ngIf="isValid" style="color:green">{{message}}</span>
-                                            <span *ngIf="!isValid" style="color: red">{{message}}</span>
+                                            <span class="text-success" *ngIf="isValid">{{message}}</span>
+                                            <span class="text-danger" *ngIf="!isValid">{{message}}</span>
                                         </div>
 
                                         <!-- Modal footer -->

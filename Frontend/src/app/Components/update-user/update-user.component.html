@@ -13,7 +13,7 @@
                             <input type="text" class="form-control" required #firstName="ngModel"
                                 placeholder="Enter your first name" id="fname" name="firstName"
                                 [(ngModel)]=user.firstName ngModel>
-                            <span *ngIf="firstName.invalid && firstName.touched" style="color:red">Please enter valid
+                            <span class="text-danger" *ngIf="firstName.invalid && firstName.touched">Please enter valid
                                 first name</span>
                         </div>
                         <div class="form-group">
@@ -21,7 +21,7 @@
                             <input type="text" required #lastName="ngModel" class="form-control"
                                 placeholder="Enter your last name" id="lname" name="lastName" [(ngModel)]=user.lastName
                                 ngModel>
-                            <span *ngIf="lastName.invalid && lastName.touched" style="color: red">Please enter valid
+                            <span class="text-danger" *ngIf="lastName.invalid && lastName.touched">Please enter valid
                                 last name</span>
                         </div>
                         <div class="form-group">
@@ -29,7 +29,7 @@
                             <input type="text" required #pinCode="ngModel" class="form-control"
                                 placeholder="Enter your area pincode" id="pincode" name="pinCode" minlength="6"
                                 [(ngModel)]=user.pinCode ngModel>
-                            <span *ngIf="pinCode.invalid && pinCode.touched" style="color:red">Please enter valid
+                            <span class="text-danger" *ngIf="pinCode.invalid && pinCode.touched">Please enter valid
                                 pincode</span>
                         </div>
                         <div class="form-group">
@@ -37,7 +37,7 @@
                             <input type="email" required #email="ngModel" class="form-control"
                                 placeholder="Enter your email address" id="email" name="email" [(ngModel)]=user.email
                                 ngModel>
-                            <span *ngIf="email.invalid && email.touched" style="color:red">Please enter valid email
+                            <span class="text-danger" *ngIf="email.invalid && email.touched">Please enter valid email
                                 address</span>
                         </div>
                         <div class="form-group">
@@ -50,7 +50,7 @@
                                     placeholder="Enter your phone number" id="phn" name="phone" minlength="10"
                                     [(ngModel)]=user.phone ngModel>
                             </div>
-                            <span *ngIf="phone.invalid && phone.touched" style="color:red">Please enter valid phone
+                            <span class="text-danger" *ngIf="phone.invalid && phone.touched">Please enter valid phone
                                 number</span>
                         </div>
 
@@ -71,8 +71,8 @@
 
                                         <!-- Modal body -->
                                         <div class="modal-body">
-                                            <span *ngIf="isValid" style="color:green">{{message}}</span>
-                                            <span *ngIf="!isValid" style="color: red">{{message}}</span>
+                                            <span class="text-success" *ngIf="isValid">{{message}}</span>
+                                            <span class="text-danger" *ngIf="!isValid">{{message}}</span>
                                         </div>
 
                                         <!-- Modal footer -->
